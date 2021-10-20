@@ -3,19 +3,15 @@ import 'package:frontend_flutter/Config/constants.dart';
 
 import 'package:image_picker/image_picker.dart';
 
-
-
 class ImageUpload extends StatefulWidget {
   @override
   _ImageUploadState createState() => _ImageUploadState();
 }
 
 class _ImageUploadState extends State<ImageUpload> {
-
   @override
   Widget build(BuildContext context) {
     return Stack(
-
       children: [
         Center(
           child: GestureDetector(
@@ -27,33 +23,32 @@ class _ImageUploadState extends State<ImageUpload> {
               backgroundColor: SecondaryBGColor,
               child: _image != null
                   ? ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.file(
-                  _image,
-                  width: 100,
-                  height: 100,
-                  fit: BoxFit.fitHeight,
-                ),
-              )
+                      borderRadius: BorderRadius.circular(50),
+                      child: Image.file(
+                        _image,
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.fitHeight,
+                      ),
+                    )
                   : Container(
-                decoration: BoxDecoration(
-                    color: SecondaryBGColor,
-                    borderRadius: BorderRadius.circular(50)
-                ),
-                width: 100,
-                height: 100,
-                child: Icon(
-                  Icons.camera_alt,
-                  color: PrimaryBGColor,
-                ),
-              ),
+                      decoration: BoxDecoration(
+                          color: SecondaryBGColor,
+                          borderRadius: BorderRadius.circular(50)),
+                      width: 100,
+                      height: 100,
+                      child: Icon(
+                        Icons.camera_alt,
+                        color: PrimaryBGColor,
+                      ),
+                    ),
             ),
           ),
         ),
       ],
-
     );
   }
+
   void _showPicker(context) {
     showModalBottomSheet(
         context: context,
@@ -83,23 +78,21 @@ class _ImageUploadState extends State<ImageUpload> {
           );
         });
   }
+
   dynamic _image;
   _imgFromCamera() async {
-
     dynamic image = await /*ImagePicker*/ _image.pickImage(
         source: ImageSource.camera, imageQuality: 50);
     setState(() {
       _image = image;
     });
   }
+
   _imgFromGallery() async {
-    dynamic image = await _image.pickImage(
-        source: ImageSource.gallery, imageQuality: 50);
+    dynamic image =
+        await _image.pickImage(source: ImageSource.gallery, imageQuality: 50);
     setState(() {
       _image = image;
     });
   }
 }
-
-
-

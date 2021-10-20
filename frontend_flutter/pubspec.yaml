@@ -34,9 +34,10 @@ dependencies:
   hooks_riverpod:
   group_radio_button:
   image_picker: ^0.8.4
-  toggle_switch: ^1.2.0
   grouped_buttons: ^1.0.4
   flutter_custom_clippers: ^2.0.0
+  flutter_svg:
+  dropdown_search: ^1.0.4
 
 
 dev_dependencies:

@@ -16,27 +16,47 @@ class BackgroundUnlogged extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            child: Image.asset(
-              "assets/images/logo_1.png",
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.fill,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/background.png'),
+                fit: BoxFit.cover,
+              ),
             ),
-
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: size.height * 0.15,
+                ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Image.asset(
+                    "assets/images/logo.png",
+                    width: size.width * 0.2,
+                    height: size.height * 0.12,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
           ),
-
-
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: size.height * 0.68,
-              decoration: BoxDecoration(
-                color: PrimaryBGColor,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(70),
+          Column(
+            children: <Widget>[
+              SizedBox(
+                height: size.height * 0.3,
+              ),
+              Expanded(
+                child: Container(
+                  height: size.height * 0.60,
+                  decoration: BoxDecoration(
+                    color: PrimaryBGColor,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(55),
+                    ),
+                  ),
+                  child: child,
                 ),
               ),
-              child: child,
-            ),
+            ],
           ),
         ],
       ),

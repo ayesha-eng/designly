@@ -5,42 +5,45 @@ import 'package:frontend_flutter/Views/Utils/image_upload.dart';
 import 'package:frontend_flutter/Views/Utils/input_text_field.dart';
 import 'package:grouped_buttons/grouped_buttons.dart';
 
-
 class SignUpRole extends StatefulWidget {
   @override
   _SignUpRoleState createState() => _SignUpRoleState();
 }
 
 class _SignUpRoleState extends State<SignUpRole> {
-  int select = 0;
+  int select = 1;
+  bool buyer = true;
+  String role = "";
+
   void f1(int a) {
     setState(() {
       select = a;
+      role = "buyer";
+      buyer = true;
     });
   }
 
-  void f2() {
-    if (select == 2)
-      _imgFromGallery();
-    else if (select == 3) Text("S");
+  void f2(int a) {
+    setState(() {
+      select = a;
+      role = "seller";
+      buyer = false;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
     String about = "";
-
     String phoneNo = "";
     String address = "";
     String specialization = "";
     String behance = "";
-    //bool select = false;
 
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(130.0), //width and height
-        // The size the AppBar would prefer if there were no other constraints.
+        preferredSize: Size.fromHeight(130.0),
         child: SafeArea(
           child: Container(
             height: size.height * 0.2,
@@ -89,14 +92,12 @@ class _SignUpRoleState extends State<SignUpRole> {
                           SizedBox(
                             height: size.height * 0.05,
                           ),
-                          Text("set Role",style: BodyText4),
+                          Text("set Role", style: BodyText4),
                           Row(
                             children: <Widget>[
-                              // Here, default theme colors are used for activeBgColor, activeFgColor, inactiveBgColor and inactiveFgColor
-
                               Radio(
                                   groupValue: select,
-                                  value: 2,
+                                  value: 1,
                                   activeColor: LabelColor,
                                   onChanged: (v) {
                                     f1(v);
@@ -104,13 +105,11 @@ class _SignUpRoleState extends State<SignUpRole> {
                               Text("Buyer"),
                               Radio(
                                   groupValue: select,
-                                  value: 3,
+                                  value: 2,
                                   activeColor: LabelColor,
                                   onChanged: (v) {
-                                    f1(v);
-                                    setState(() {
-                                      _imgFromGallery();
-                                    });
+                                    f2(v);
+                                    setState(() {});
                                   }),
                               Text("Seller"),
                             ],
@@ -177,50 +176,57 @@ class _SignUpRoleState extends State<SignUpRole> {
                           SizedBox(
                             height: size.height * 0.02,
                           ),
-                          Text(
-                            "Specialization",
-                            style: BodyText4,
-                          ),
-                          SizedBox(
-                            height: size.height * 0.01,
-                          ),
-                          InputTextField(
-                            obText: true,
-                            validator: (val) {
-                              if (val.length == 0)
-                                return ("specialization is required");
-                            },
-                            onSaved: (val) {
-                              specialization = val;
-                            },
-                          ),
-                          SizedBox(
-                            height: size.height * 0.02,
-                          ),
-                          Text(
-                            "socials",
-                            style: BodyText4,
-                          ),
-                          SizedBox(
-                            height: size.height * 0.02,
-                          ),
-                          Text(
-                            "Behance",
-                            style: BodyText4,
-                          ),
-                          SizedBox(
-                            height: size.height * 0.01,
-                          ),
-                          InputTextField(
-                            obText: true,
-                            validator: (val) {
-                              if (val.length == 0)
-                                return ("behance is required");
-                            },
-                            onSaved: (val) {
-                              behance = val;
-                            },
-                          ),
+                          buyer
+                              ? SizedBox()
+                              : Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Specialization",
+                                      style: BodyText4,
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.01,
+                                    ),
+                                    InputTextField(
+                                      obText: true,
+                                      validator: (val) {
+                                        if (val.length == 0)
+                                          return ("specialization is required");
+                                      },
+                                      onSaved: (val) {
+                                        specialization = val;
+                                      },
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.02,
+                                    ),
+                                    Text(
+                                      "socials",
+                                      style: BodyText4,
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.02,
+                                    ),
+                                    Text(
+                                      "Behance",
+                                      style: BodyText4,
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.01,
+                                    ),
+                                    InputTextField(
+                                      obText: true,
+                                      validator: (val) {
+                                        if (val.length == 0)
+                                          return ("behance is required");
+                                      },
+                                      onSaved: (val) {
+                                        behance = val;
+                                      },
+                                    ),
+                                  ],
+                                ),
                           Divider(
                             height: 30,
                             thickness: 2,
@@ -293,21 +299,6 @@ class _SignUpRoleState extends State<SignUpRole> {
           ),
         ),
       ),
-    );
-  }
-
-  _imgFromGallery() {
-    String specializations = "";
-
-    InputTextField(
-      obText: true,
-
-      validator: (val) {
-        if (val.length == 0) return ("about is required");
-      },
-      onSaved: (val) {
-        specializations = val;
-      },
     );
   }
 }

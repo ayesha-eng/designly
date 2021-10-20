@@ -92,7 +92,10 @@ class LoginScreen extends HookWidget {
                               ),
                               Button(
                                 text: 'Sign in',
-                                onPressed: () async {},
+                                onPressed: () async {
+                                  Navigator.of(context)
+                                      .pushNamed("/dashboard/screen");
+                                },
                               ),
                               SizedBox(
                                 height: size.height * .02,

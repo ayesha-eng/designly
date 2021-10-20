@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend_flutter/Config/constants.dart';
 
-class Button extends StatelessWidget {
+class ConfirmButton extends StatelessWidget {
   final Function onPressed;
   final String text;
   final ButtonStyle style;
@@ -9,7 +9,8 @@ class Button extends StatelessWidget {
   static ButtonStyle primaryStyle = ElevatedButton.styleFrom(
     padding: EdgeInsets.all(16),
     minimumSize: Size(double.infinity, 56),
-    primary: SecondaryBGColor,
+    onPrimary: SecondaryBGColor,
+    primary: LabelColor,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(4),
     ),
@@ -24,7 +25,8 @@ class Button extends StatelessWidget {
       borderRadius: BorderRadius.circular(4),
     ),
   );
-  const Button({@required this.text, @required this.onPressed, this.style});
+  const ConfirmButton(
+      {@required this.text, @required this.onPressed, this.style});
 
   @override
   Widget build(BuildContext context) {

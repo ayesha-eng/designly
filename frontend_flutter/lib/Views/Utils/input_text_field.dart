@@ -27,14 +27,16 @@ class InputTextField extends StatelessWidget {
       decoration: InputDecoration(
         enabledBorder:
             OutlineInputBorder(borderSide: BorderSide(color: SecondaryBGColor)),
-        border:   OutlineInputBorder(borderSide: BorderSide(color: SecondaryBGColor)) ,
+        border:
+            OutlineInputBorder(borderSide: BorderSide(color: SecondaryBGColor)),
         suffixIcon: Icon(
           icon,
           color: Colors.cyan, //Colors.grey[900],
         ),
       ),
       validator: validator,
-      keyboardType: inputType,
+      keyboardType: keyboardType,
+      //keyboardType: inputType,
       obscureText: obText,
       textInputAction: inputAction,
       onSaved: onSaved,
