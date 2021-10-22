@@ -38,6 +38,7 @@ dependencies:
   flutter_custom_clippers: ^2.0.0
   flutter_svg:
   dropdown_search: ^1.0.4
+  dotted_border:
 
 
 dev_dependencies:

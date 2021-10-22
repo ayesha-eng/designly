@@ -158,7 +158,7 @@ class _CompetitionViewState extends State<CompetitionView> {
                     child: ConfirmButton(
                       text: 'Join Competition',
                       onPressed: () async {
-                        Navigator.of(context).pushNamed("/dashboard/screen");
+                        Navigator.of(context).pushNamed("/competition/submit");
                       },
                     ),
                   ),
