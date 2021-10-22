@@ -63,14 +63,12 @@ const TextStyle BodyText7 = TextStyle(
   fontFamily: 'open-sans',
   fontSize: 20,
   fontWeight: FontWeight.normal,
-
 );
 const TextStyle BodyText10 = TextStyle(
   fontSize: 16,
   color: LabelColor,
   fontFamily: 'open-sans',
   fontWeight: FontWeight.normal,
-
 );
 const TextStyle BodyText11 = TextStyle(
   fontSize: 20,
@@ -83,5 +81,4 @@ const TextStyle BodyText12 = TextStyle(
   color: PrimaryColor,
   fontFamily: 'open-sans',
   fontWeight: FontWeight.normal,
-
 );

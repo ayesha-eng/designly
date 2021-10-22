@@ -78,6 +78,9 @@ class _CompetitionState extends State<Competition> {
                   child: Column(
                     children: [
                       DashBoardCard(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed("/competition/view");
+                        },
                         coverImage: "assets/images/cover.jpg",
                         title: "Competition name",
                         subTitle: "End Date:11-12-2021",

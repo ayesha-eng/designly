@@ -5,12 +5,12 @@ import 'package:frontend_flutter/Views/UI/Competition/filter_button.dart';
 import 'package:frontend_flutter/Views/Utils/confirm_button.dart';
 import 'package:frontend_flutter/Views/Utils/input_text_field.dart';
 
-class Competition extends StatefulWidget {
+class CompetitionAdd extends StatefulWidget {
   @override
-  _CompetitionState createState() => _CompetitionState();
+  _CompetitionAddState createState() => _CompetitionAddState();
 }
 
-class _CompetitionState extends State<Competition> {
+class _CompetitionAddState extends State<CompetitionAdd> {
   @override
   Widget build(BuildContext context) {
     String name = "";

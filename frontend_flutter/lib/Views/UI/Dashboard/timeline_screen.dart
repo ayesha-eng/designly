@@ -37,13 +37,15 @@ class _TimelineScreenState extends State<TimelineScreen> {
                   child: Column(
                     children: [
                       DashBoardCard(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed("");
+                        },
                         coverImage: "assets/images/cover.jpg",
                         title: "Project Name Project Name",
                         subTitle: "Designer Name Designer Name",
                         iconImage: 'assets/images/Eye _1.png',
-                          image: 'assets/images/writer.jpg',
-                          number:"999",
-
+                        image: 'assets/images/writer.jpg',
+                        number: "999",
                       ),
                       SizedBox(
                         height: size.height * 0.06,

@@ -2,7 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:frontend_flutter/Views/UI/Auth/login_screen.dart';
 import 'package:frontend_flutter/Views/UI/Auth/sign_up_role.dart';
 import 'package:frontend_flutter/Views/UI/Auth/signup_screen.dart';
-import 'package:frontend_flutter/Views/UI/Competition/competition.dart';
+import 'package:frontend_flutter/Views/UI/Competition/competition_add.dart';
+import 'package:frontend_flutter/Views/UI/Competition/competition_view.dart';
 import 'package:frontend_flutter/Views/UI/Dashboard/dashboard.dart';
 import 'package:frontend_flutter/Views/UI/Profile/buyer_profile.dart';
 import 'package:frontend_flutter/Views/UI/Profile/designer_profile.dart';
@@ -16,6 +17,9 @@ final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
   "/profile/designer": (BuildContext context) => DesignerProfile(),
   "/profile/buyer": (BuildContext context) => BuyerProfile(),
   "/drawer/side": (BuildContext context) => SideDrawer(),
-  "/competition/add": (BuildContext context) => Competition(),
+  "/competition/add": (BuildContext context) => CompetitionAdd(),
+  "/competition/view": (BuildContext context) => CompetitionView(),
+
+
 
 };

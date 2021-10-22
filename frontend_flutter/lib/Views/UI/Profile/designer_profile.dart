@@ -83,6 +83,7 @@ class _DesignerProfileState extends State<DesignerProfile> {
                               Icon(
                                 Icons.star,
                                 color: LabelColor,
+
                                 size: 27.0,
                               ),
                               Icon(
@@ -99,6 +100,7 @@ class _DesignerProfileState extends State<DesignerProfile> {
                           ProfileIcon(),
                           SizedBox(
                             height: size.height * 0.01,
+
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
