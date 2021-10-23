@@ -11,6 +11,7 @@ class SignUpRole extends StatefulWidget {
 }
 
 class _SignUpRoleState extends State<SignUpRole> {
+  final formKey = GlobalKey<FormState>();
   int select = 1;
   bool buyer = true;
   String role = "";
@@ -33,7 +34,7 @@ class _SignUpRoleState extends State<SignUpRole> {
 
   @override
   Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
+
     String about = "";
     String phoneNo = "";
     String address = "";

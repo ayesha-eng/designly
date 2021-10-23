@@ -184,7 +184,7 @@ class _ProjectAddPreviewState extends State<ProjectAddPreview> {
                       ConfirmButton(
                         text: ("Confirm & Publish"),
                         onPressed: () async {
-                          Navigator.of(context).pushNamed("/dashboard/screen");
+                          Navigator.of(context).pushNamed("/project/view");
                         },
                       ),
                     ],

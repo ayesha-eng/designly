@@ -11,6 +11,7 @@ import 'package:frontend_flutter/Views/UI/Profile/designer_profile.dart';
 import 'package:frontend_flutter/Views/UI/Project/project_add.dart';
 import 'package:frontend_flutter/Views/UI/Project/project_add_next.dart';
 import 'package:frontend_flutter/Views/UI/Project/project_add_preview.dart';
+import 'package:frontend_flutter/Views/UI/Project/project_view.dart';
 import 'package:frontend_flutter/Views/Utils/side_drawer.dart';
 
 final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
@@ -27,6 +28,8 @@ final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
   "/project/add": (BuildContext context) => ProjectAdd(),
   "/project/add/next": (BuildContext context) => ProjectAddNext(),
   "/project/add/preview": (BuildContext context) => ProjectAddPreview(),
+"/project/view": (BuildContext context) => ProjectView(),
+
 
 
 
