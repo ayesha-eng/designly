@@ -38,7 +38,7 @@ class _TimelineScreenState extends State<TimelineScreen> {
                     children: [
                       DashBoardCard(
                         onPressed: () {
-                          Navigator.of(context).pushNamed("");
+                          Navigator.of(context).pushNamed("/project/add");
                         },
                         coverImage: "assets/images/cover.jpg",
                         title: "Project Name Project Name",

@@ -8,6 +8,9 @@ import 'package:frontend_flutter/Views/UI/Competition/competition_view.dart';
 import 'package:frontend_flutter/Views/UI/Dashboard/dashboard.dart';
 import 'package:frontend_flutter/Views/UI/Profile/buyer_profile.dart';
 import 'package:frontend_flutter/Views/UI/Profile/designer_profile.dart';
+import 'package:frontend_flutter/Views/UI/Project/project_add.dart';
+import 'package:frontend_flutter/Views/UI/Project/project_add_next.dart';
+import 'package:frontend_flutter/Views/UI/Project/project_add_preview.dart';
 import 'package:frontend_flutter/Views/Utils/side_drawer.dart';
 
 final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
@@ -21,6 +24,10 @@ final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
   "/competition/add": (BuildContext context) => CompetitionAdd(),
   "/competition/view": (BuildContext context) => CompetitionView(),
   "/competition/submit": (BuildContext context) => CompetitionSubmit(),
+  "/project/add": (BuildContext context) => ProjectAdd(),
+  "/project/add/next": (BuildContext context) => ProjectAddNext(),
+  "/project/add/preview": (BuildContext context) => ProjectAddPreview(),
+
 
 
 
