@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend_flutter/Config/constants.dart';
-
 import 'custom_button.dart';
 
 class BannerScreen extends StatelessWidget {
@@ -29,7 +28,6 @@ class BannerScreen extends StatelessWidget {
       this.secondIcon,
       this.numberOne})
       : super(key: key);
-  /*const Banner({Key? key}) : super(key: key);*/
 
   @override
   Widget build(BuildContext context) {
@@ -42,25 +40,6 @@ class BannerScreen extends StatelessWidget {
           height: size.height * 0.35,
           fit: BoxFit.cover,
         ),
-        /* Container(
-          height: size.height * 0.35,
-          width: size.width,
-          decoration: BoxDecoration(
-            border: Border.all(
-              width: 2.0,
-              color: PrimaryBGColor,
-            ),
-            borderRadius: BorderRadius.all(Radius.circular(10.0)),
-          ),
-          child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(coverImage),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-        ),*/
         Padding(
           padding: const EdgeInsets.only(left: 25, top: 10),
           child: Column(

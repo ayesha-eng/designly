@@ -18,7 +18,7 @@ class _BuyerProfileState extends State<BuyerProfile> {
     return ProfileBackground(
       label: "Buyer Name",
       onTap: () async {
-        Navigator.of(context).pushNamed("");
+        Navigator.of(context).pushNamed("/buyer/profile/edit");
       },
       child: SafeArea(
         child: Container(

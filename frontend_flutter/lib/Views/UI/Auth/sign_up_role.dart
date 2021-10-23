@@ -48,7 +48,7 @@ class _SignUpRoleState extends State<SignUpRole> {
         child: SafeArea(
           child: Container(
             height: size.height * 0.2,
-            color: SecondaryColor,
+            color: SecondaryBGColor,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
