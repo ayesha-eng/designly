@@ -34,7 +34,6 @@ class _SignUpRoleState extends State<SignUpRole> {
 
   @override
   Widget build(BuildContext context) {
-
     String about = "";
     String phoneNo = "";
     String address = "";

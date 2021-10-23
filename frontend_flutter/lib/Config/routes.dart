@@ -9,6 +9,7 @@ import 'package:frontend_flutter/Views/UI/Dashboard/dashboard.dart';
 import 'package:frontend_flutter/Views/UI/Profile/buyer_profile.dart';
 import 'package:frontend_flutter/Views/UI/Profile/buyer_profile_edit.dart';
 import 'package:frontend_flutter/Views/UI/Profile/designer_profile.dart';
+import 'package:frontend_flutter/Views/UI/Profile/designer_profile_edit.dart';
 import 'package:frontend_flutter/Views/UI/Project/project_add.dart';
 import 'package:frontend_flutter/Views/UI/Project/project_add_next.dart';
 import 'package:frontend_flutter/Views/UI/Project/project_add_preview.dart';
@@ -31,6 +32,8 @@ final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
   "/project/add/preview": (BuildContext context) => ProjectAddPreview(),
   "/project/view": (BuildContext context) => ProjectView(),
   "/buyer/profile/edit": (BuildContext context) => BuyerProfileEdit(),
+  "/designer/profile/edit": (BuildContext context) => DesignerProfileEdit(),
+
 
 
 };

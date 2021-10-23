@@ -19,7 +19,7 @@ class _DesignerProfileState extends State<DesignerProfile> {
     return ProfileBackground(
       label: "Designer Name",
       onTap:  () async {
-                    Navigator.of(context).pushNamed("");
+                    Navigator.of(context).pushNamed("/designer/profile/edit");
                   },
       child: SafeArea(
         child: Container(

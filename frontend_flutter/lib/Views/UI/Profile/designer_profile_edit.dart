@@ -4,12 +4,12 @@ import 'package:frontend_flutter/Views/Utils/button.dart';
 import 'package:frontend_flutter/Views/Utils/image_upload.dart';
 import 'package:frontend_flutter/Views/Utils/input_text_field.dart';
 
-class BuyerProfileEdit extends StatefulWidget {
+class DesignerProfileEdit extends StatefulWidget {
   @override
-  _BuyerProfileEditState createState() => _BuyerProfileEditState();
+  _DesignerProfileEditState createState() => _DesignerProfileEditState();
 }
 
-class _BuyerProfileEditState extends State<BuyerProfileEdit> {
+class _DesignerProfileEditState extends State<DesignerProfileEdit> {
   final formKey = GlobalKey<FormState>();
 
   @override
@@ -17,6 +17,8 @@ class _BuyerProfileEditState extends State<BuyerProfileEdit> {
     String about = "";
     String phoneNo = "";
     String address = "";
+    String specialization = "";
+    String behance = "";
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
@@ -128,9 +130,47 @@ class _BuyerProfileEditState extends State<BuyerProfileEdit> {
                           SizedBox(
                             height: size.height * .01,
                           ),
-                          SizedBox(
-                            height: size.height * 0.02,
+                          Text(
+                            "Specialization",
+                            style: BodyText4,
                           ),
+                          SizedBox(
+                            height: size.height * 0.01,
+                          ),
+                          InputTextField(
+                            obText: true,
+                            validator: (val) {
+                              if (val.length == 0) return ("specialization is required");
+                            },
+                            onSaved: (val) {
+                              specialization = val;
+                            },
+                          ),
+                          SizedBox(
+                            height: size.height * .01,
+                          ),
+                          Text(
+                            "Behance",
+                            style: BodyText4,
+                          ),
+                          SizedBox(
+                            height: size.height * 0.01,
+                          ),
+                          InputTextField(
+                            obText: true,
+                            validator: (val) {
+                              if (val.length == 0) return ("behance is required");
+                            },
+                            onSaved: (val) {
+                              behance = val;
+                            },
+                          ),
+                          SizedBox(
+                            height: size.height * .02,
+                          ),
+
+
+
                         ],
                       ),
                       Column(
